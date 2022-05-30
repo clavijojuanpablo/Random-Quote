@@ -1,0 +1,58 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote{
+  padding: 60px;
+  width: min(600px, 80%);
+  border-radius: 15px;
+  box-shadow: 1px 1px 7px 0 #0009;
+  color: white;
+  text-align: center;
+}
+
+h2{
+  font-size: 35px;
+}
+h2::after{
+  content: close-quote;
+  font-size: 50px;
+}
+h2::before{
+  content: open-quote;
+  font-size: 50px;
+}
+
+p{
+  font-size: 25px;
+  font-style: italic;
+}
+p::after{
+  content: " >";
+}
+p::before{
+  content: "< ";
+}
+
+.btnRefresh{
+  display: block;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 0 #000a;
+  transition: box-shadow 200ms ease;
+}
+
+.btnRefresh:active{
+  box-shadow: 0 0 0 0 #000a;
+  transition: box-shadow 200ms ease;
+}
+
